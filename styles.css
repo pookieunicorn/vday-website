@@ -133,4 +133,47 @@ body {
     to {
         transform: rotate(360deg);
     }
+}
+
+.heart-container {
+    margin-bottom: 2rem;
+}
+
+.heart {
+    width: 120px;
+    height: 120px;
+    background: #ff1493;
+    position: relative;
+    display: inline-block;
+    transform: rotate(-45deg);
+    animation: pulse 1.2s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #ff1493;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -60px;
+    left: 0;
+}
+
+.heart::after {
+    left: 60px;
+    top: 0;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-45deg);
+    }
 } 
