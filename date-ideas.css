@@ -100,4 +100,21 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff69b4;
+    font-size: 1.2rem;
+    margin-left: 0.7rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s;
+    vertical-align: middle;
+    padding: 0.2rem 0.4rem;
+}
+.delete-btn:hover {
+    background: #ffe4e1;
+    color: #d63384;
 } 

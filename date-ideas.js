@@ -23,9 +23,21 @@ document.addEventListener('DOMContentLoaded', () => {
             ideasList.innerHTML = '<li style="color:#aaa; font-style:italic;">No ideas yet. Be the first to share one!</li>';
             return;
         }
-        ideas.forEach((idea) => {
+        ideas.forEach((idea, idx) => {
             const li = document.createElement('li');
             li.textContent = idea;
+            // Create delete button
+            const delBtn = document.createElement('button');
+            delBtn.innerHTML = '🗑️';
+            delBtn.className = 'delete-btn';
+            delBtn.title = 'Delete this idea';
+            delBtn.onclick = (e) => {
+                e.stopPropagation();
+                ideas.splice(idx, 1);
+                localStorage.setItem('dateIdeas', JSON.stringify(ideas));
+                renderIdeas();
+            };
+            li.appendChild(delBtn);
             ideasList.appendChild(li);
         });
     }
