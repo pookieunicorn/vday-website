@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Ideas Board</title>
+    <link rel="stylesheet" href="date-ideas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">💌 Share Your Date Ideas! 💌</h1>
+        <form id="ideaForm" class="idea-form">
+            <input type="text" id="ideaInput" placeholder="Enter a romantic date idea..." maxlength="100" required />
+            <button type="submit" class="submit-btn">Add Idea</button>
+        </form>
+        <div class="ideas-list-container">
+            <h2 class="ideas-title">Date Ideas from Everyone:</h2>
+            <ul id="ideasList" class="ideas-list"></ul>
+        </div>
+    </div>
+    <script src="date-ideas.js"></script>
+</body>
+</html> 
